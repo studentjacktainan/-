@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="183.0" prefWidth="271.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.tank_war.HelloController">
+<VBox alignment="CENTER" prefHeight="448.0" prefWidth="675.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.tank_war.HelloController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
-
-  <Label fx:id="welcomeText" />
-  <Button onAction="#onHelloButtonClick" text="Hello!" />
+   <children>
+      <AnchorPane prefHeight="603.0" prefWidth="635.0">
+         <children>
+            <Label layoutX="80.0" layoutY="81.0" prefHeight="63.0" prefWidth="86.0" text="用戶名">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="223.0" layoutY="24.0" prefHeight="47.0" prefWidth="177.0" text="用戶註冊">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="80.0" layoutY="160.0" prefHeight="63.0" prefWidth="78.0" text="密碼">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="180.0" layoutY="98.0" prefHeight="41.0" prefWidth="273.0" />
+            <Label layoutX="80.0" layoutY="242.0" text="郵箱">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="email" layoutX="180.0" layoutY="241.0" prefHeight="41.0" prefWidth="273.0" />
+            <Button fx:id="submit" layoutX="158.0" layoutY="326.0" mnemonicParsing="false" onAction="#submitclicked" text="確認">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="cancel" layoutX="385.0" layoutY="326.0" mnemonicParsing="false" onAction="#cancelclicked" text="取消">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="password" layoutX="181.0" layoutY="175.0" prefHeight="41.0" prefWidth="273.0" />
+         </children>
+      </AnchorPane>
+      <BorderPane prefHeight="206.0" prefWidth="635.0" />
+   
+     <Label fx:id="welcomeText" />
+   </children>
 </VBox>
