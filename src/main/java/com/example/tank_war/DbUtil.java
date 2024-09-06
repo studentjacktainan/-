@@ -28,7 +28,7 @@ public class DbUtil {
         }
         return preparedStatement;
     }
-    public static int executeUpdate(String sql, ArrayList<Object> params){
+    public static int getexecuteUpdate(String sql, ArrayList<Object> params){
         int count=0;
         preparedStatement=getPreparedStatement(sql);
         try {
@@ -46,7 +46,7 @@ public class DbUtil {
         }
         return count;
     }
-    public static ResultSet executeQuery(String sql, ArrayList<Object> pramars) {
+    public static ResultSet getexecuteQuery(String sql, ArrayList<Object> pramars) {
         getPreparedStatement(sql);
         try {
             //绑定  ????   type
